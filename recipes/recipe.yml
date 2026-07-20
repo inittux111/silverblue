@@ -1,6 +1,5 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# Trigger-run
 name: silverblue
 description: This is my personal OS image base on Ublue Fedora Silverblue
 
@@ -13,20 +12,6 @@ modules:
       - source: system
         destination: /
 
-  - type: akmods
-    base: main
-    install:
-      - xone
-      - xpadneo
-    nvidia-driver: nvidia-open
-
-  - type: kargs
-    arch: x86_64
-    kargs:
-      - rd.driver.blacklist=nouveau
-      - modprobe.blacklist=nouveau 
-      - vidia-drm.modeset=1
-  
   - type: dnf
     repos:
       files:
@@ -121,6 +106,20 @@ modules:
       - Dash to Dock
       - Just Perfection
       - User Themes
+  
+  - type: akmods
+    base: main
+    install:
+      - xone
+      - xpadneo
+    nvidia-driver: nvidia-open
+
+  - type: kargs
+    arch: x86_64
+    kargs:
+      - rd.driver.blacklist=nouveau
+      - modprobe.blacklist=nouveau 
+      - vidia-drm.modeset=1
 
   - type: initramfs
   - type: signing
