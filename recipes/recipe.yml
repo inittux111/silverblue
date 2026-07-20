@@ -46,6 +46,7 @@ modules:
         - bat
         - chromium
         - fastfetch
+        - fuse-libs
         - git
         - libvirt
         - libvirt-client
