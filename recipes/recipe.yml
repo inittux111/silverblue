@@ -120,4 +120,5 @@ modules:
       - Just Perfection
       - User Themes
 
+  - type: initramfs
   - type: signing
