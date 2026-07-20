@@ -110,5 +110,6 @@ modules:
       - AppIndicator and KStatusNotifierItem Support
       - Just Perfection
       - User Themes
+      - Dash to Dock
 
   - type: signing
