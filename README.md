@@ -1,6 +1,6 @@
 # Repository information
 
-This is Ublue Silverblue with my own customizations
+This is Ublue Silverblue with my own customizations.
 
 ## Installation
 
