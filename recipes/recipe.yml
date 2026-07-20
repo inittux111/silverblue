@@ -18,6 +18,13 @@ modules:
       - xone
       - xpadneo
     nvidia-driver: nvidia-open
+
+   - type: kargs
+     arch: x86_64, aarch64 # only inject kernel arguments to these specific OS architectures
+      kargs:
+        - rd.driver.blacklist=nouveau
+        - modprobe.blacklist=nouveau 
+        - vidia-drm.modeset=1
   
   - type: dnf
     repos:
