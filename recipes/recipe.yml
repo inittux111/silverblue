@@ -77,12 +77,12 @@ modules:
           - com.vscodium.codium
           - com.vysp3r.ProtonPlus
           - com.saivert.pwvucontrol
+          - dev.vencord.Vesktop
+          - info.mumble.Mumble
           - io.github.celluloid_player.Celluloid
           - io.github.Foldex.AdwSteamGtk
           - io.github.kolunmi.Bazaar
           - io.missioncenter.MissionCenter
-          - org.jellyfin.JellyfinDesktop
-          - org.libreoffice.LibreOffice
           - org.gnome.baobab
           - org.gnome.Calculator
           - org.gnome.Calendar
@@ -98,11 +98,11 @@ modules:
           - org.gnome.TextEditor
           - org.gnome.Weather
           - org.gnucash.GnuCash
+          - org.jellyfin.JellyfinDesktop
+          - org.libreoffice.LibreOffice
           - org.mozilla.firefox
           - org.mozilla.thunderbird
           - org.remmina.Remmina
-          - dev.vencord.Vesktop
-          - info.mumble.Mumble
           - page.tesk.Refine
 
   - type: gnome-extensions
