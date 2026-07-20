@@ -55,6 +55,7 @@ modules:
         - sshfs
         - starship
         - steam
+        - vim
         - virt-install
         - virt-manager
         - zsh
