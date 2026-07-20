@@ -69,40 +69,41 @@ modules:
       repo:
         title: Flathub (system)
       install: 
+          - com.github.IsmaelMartinez.teams_for_linux
+          - com.github.tchx84.Flatseal
+          - com.heroicgameslauncher.hgl
+          - com.mattjakeman.ExtensionManager
+          - com.rtosta.zapzap
+          - com.vscodium.codium
+          - com.vysp3r.ProtonPlus
+          - com.saivert.pwvucontrol
+          - io.github.celluloid_player.Celluloid
+          - io.github.Foldex.AdwSteamGtk
+          - io.github.kolunmi.Bazaar
+          - io.missioncenter.MissionCenter
+          - org.jellyfin.JellyfinDesktop
+          - org.libreoffice.LibreOffice
+          - org.gnome.baobab
           - org.gnome.Calculator
           - org.gnome.Calendar
           - org.gnome.Characters
+          - org.gnome.clocks
           - org.gnome.Contacts
           - org.gnome.Firmware
+          - org.gnome.font-viewer
           - org.gnome.Logs
           - org.gnome.Loupe
           - org.gnome.NautilusPreviewer
           - org.gnome.Papers
           - org.gnome.TextEditor
           - org.gnome.Weather
-          - org.gnome.baobab
-          - org.gnome.clocks
-          - org.gnome.font-viewer
           - org.gnucash.GnuCash
-          - org.jellyfin.JellyfinDesktop
-          - org.libreoffice.LibreOffice
+          - org.mozilla.firefox
           - org.mozilla.thunderbird
           - org.remmina.Remmina
-          - com.vscodium.codium
-          - com.mattjakeman.ExtensionManager
-          - com.github.tchx84.Flatseal
-          - com.heroicgameslauncher.hgl
-          - com.vysp3r.ProtonPlus
-          - com.saivert.pwvucontrol
-          - com.github.IsmaelMartinez.teams_for_linux
-          - com.rtosta.zapzap
-          - io.github.Foldex.AdwSteamGtk
-          - io.github.kolunmi.Bazaar
-          - io.github.celluloid_player.Celluloid
-          - io.missioncenter.MissionCenter
+          - dev.vencord.Vesktop
           - info.mumble.Mumble
           - page.tesk.Refine
-          - dev.vencord.Vesktop
 
   - type: gnome-extensions
     install:
