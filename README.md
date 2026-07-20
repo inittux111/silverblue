@@ -1,13 +1,8 @@
-# silverblue &nbsp; [![bluebuild build badge](https://github.com/inittux111/silverblue/actions/workflows/build.yml/badge.svg)](https://github.com/inittux111/silverblue/actions/workflows/build.yml)
+# Repository information
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+This is Ublue Silverblue with my own customizations
 
 ## Installation
-
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
 

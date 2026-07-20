@@ -1,45 +1,114 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
 name: silverblue
-# description will be included in the image's metadata
-description: This is my personal OS image.
+description: This is my personal OS image base on Ublue Fedora Silverblue
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 44
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        destination: /
 
+  - type: akmods
+    base: main
+    install:
+      - xone
+      - xpadneo
+    nvidia-driver: nvidia-open
+  
   - type: dnf
     repos:
-      copr:
-        - atim/starship
-    install:
-      packages:
-        - micro
-        - starship
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - gnome-software
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+        - firefox-langpacks
+        - transmission-daemon
+        - gnome-initial-setup
+        - gnome-tour
+        - gnome-classic-session
+        - gnome-user-docs
+        - gnome-remote-desktop
+    install:
+      packages:
+        - neovim
+        - starship
+        - chromium
+        - bat
+        - git
+        - lsd
+        - zsh
+        - sshfs
+        - signal-desktop
+        - qemu-kvm
+        - libvirt
+        - libvirt-client
+        - libvirt-daemon
+        - libvirt-daemon-driver-qemu
+        - libvirt-daemon-config-network
+        - virt-install
+        - virt-manager
+        - kitty
+        - steam
+        - mangohud
+        - mullvad-vpn
+        - fastfetch
+  
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
+    - scope: user
+      repo:
+        title: Flathub (user)
+    - scope: system
+      notify: true
+      repo:
+        title: Flathub (system)
+      install: 
+          - org.gnome.Calculator
+          - org.gnome.Calendar
+          - org.gnome.Characters
+          - org.gnome.Contacts
+          - org.gnome.Firmware
+          - org.gnome.Logs
           - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+          - org.gnome.NautilusPreviewer
+          - org.gnome.Papers
+          - org.gnome.TextEditor
+          - org.gnome.Weather
+          - org.gnome.baobab
+          - org.gnome.clocks
+          - org.gnome.font-viewer
+          - io.missioncenter.MissionCenter
+          - com.mattjakeman.ExtensionManager
+          - com.saivert.pwvucontrol
+          - com.github.tchx84.Flatseal
+          - org.libreoffice.LibreOffice
+          - org.mozilla.thunderbird
+          - org.gnucash.GnuCash
+          - com.github.IsmaelMartinez.teams_for_linux
+          - com.rtosta.zapzap
+          - com.vscodium.codium
+          - com.vysp3r.ProtonPlus
+          - dev.vencord.Vesktop
+          - io.github.Foldex.AdwSteamGtk
+          - org.jellyfin.JellyfinDesktop
+          - info.mumble.Mumble
+          - com.heroicgameslauncher.hgl
+          - io.github.celluloid_player.Celluloid
+          - org.remmina.Remmina
+          - page.tesk.Refine
+          - com.vscodium.codium
+          - io.github.kolunmi.Bazaar
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: gnome-extensions
+    install:
+      - AppIndicator and KStatusNotifierItem Support
+      - Just Perfection
+      - User Themes
+
+  - type: signing
