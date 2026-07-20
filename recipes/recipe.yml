@@ -25,39 +25,39 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     remove:
       packages:
-        - gnome-software
         - firefox
         - firefox-langpacks
-        - transmission-daemon
+        - gnome-software
         - gnome-initial-setup
         - gnome-tour
         - gnome-classic-session
         - gnome-user-docs
         - gnome-remote-desktop
+        - transmission-daemon
     install:
       packages:
-        - neovim
-        - starship
-        - chromium
         - bat
+        - chromium
+        - fastfetch
         - git
-        - lsd
-        - zsh
-        - sshfs
-        - signal-desktop
-        - qemu-kvm
         - libvirt
         - libvirt-client
         - libvirt-daemon
         - libvirt-daemon-driver-qemu
         - libvirt-daemon-config-network
-        - virt-install
-        - virt-manager
+        - lsd
         - kitty
-        - steam
         - mangohud
         - mullvad-vpn
-        - fastfetch
+        - neovim
+        - qemu-kvm
+        - signal-desktop
+        - sshfs
+        - starship
+        - steam
+        - virt-install
+        - virt-manager
+        - zsh
   
   - type: default-flatpaks
     configurations:
@@ -83,33 +83,32 @@ modules:
           - org.gnome.baobab
           - org.gnome.clocks
           - org.gnome.font-viewer
-          - io.missioncenter.MissionCenter
-          - com.mattjakeman.ExtensionManager
-          - com.saivert.pwvucontrol
-          - com.github.tchx84.Flatseal
+          - org.gnucash.GnuCash
+          - org.jellyfin.JellyfinDesktop
           - org.libreoffice.LibreOffice
           - org.mozilla.thunderbird
-          - org.gnucash.GnuCash
+          - org.remmina.Remmina
+          - com.vscodium.codium
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal
+          - com.heroicgameslauncher.hgl
+          - com.vysp3r.ProtonPlus
+          - com.saivert.pwvucontrol
           - com.github.IsmaelMartinez.teams_for_linux
           - com.rtosta.zapzap
-          - com.vscodium.codium
-          - com.vysp3r.ProtonPlus
-          - dev.vencord.Vesktop
           - io.github.Foldex.AdwSteamGtk
-          - org.jellyfin.JellyfinDesktop
-          - info.mumble.Mumble
-          - com.heroicgameslauncher.hgl
-          - io.github.celluloid_player.Celluloid
-          - org.remmina.Remmina
-          - page.tesk.Refine
-          - com.vscodium.codium
           - io.github.kolunmi.Bazaar
+          - io.github.celluloid_player.Celluloid
+          - io.missioncenter.MissionCenter
+          - info.mumble.Mumble
+          - page.tesk.Refine
+          - dev.vencord.Vesktop
 
   - type: gnome-extensions
     install:
       - AppIndicator and KStatusNotifierItem Support
+      - Dash to Dock
       - Just Perfection
       - User Themes
-      - Dash to Dock
 
   - type: signing
