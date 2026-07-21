@@ -22,7 +22,7 @@ modules:
     kargs:
       - rd.driver.blacklist=nouveau
       - modprobe.blacklist=nouveau 
-      - vidia-drm.modeset=1
+      - nvidia-drm.modeset=1
   
   - type: dnf
     repos:
