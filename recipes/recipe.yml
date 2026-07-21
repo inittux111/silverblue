@@ -42,6 +42,7 @@ modules:
     install:
       packages:
         - bat
+        - chezmoi
         - chromium
         - fastfetch
         - fuse-libs
