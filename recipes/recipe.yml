@@ -9,10 +9,10 @@ image-version: 44
 modules:
   - type: files
     files:
-      - source: system
-        destination: /
       - source: system/etc/locale.conf 
         destination: /etc/locale.conf
+      - source: system
+        destination: /
 
   - type: akmods
     base: main
