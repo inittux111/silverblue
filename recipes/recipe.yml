@@ -11,6 +11,8 @@ modules:
     files:
       - source: system
         destination: /
+      - source: system/etc/locale.conf 
+        destination: /etc/locale.conf
 
   - type: akmods
     base: main
