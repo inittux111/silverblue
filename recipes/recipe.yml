@@ -17,12 +17,12 @@ modules:
     install: []
     nvidia-driver: nvidia-open
 
-  - type: kargs
-    arch: x86_64
-    kargs:
-      - rd.driver.blacklist=nouveau
-      - modprobe.blacklist=nouveau 
-      - nvidia-drm.modeset=1
+  #- type: kargs
+  #  arch: x86_64
+  #  kargs:
+     # - rd.driver.blacklist=nouveau
+     # - modprobe.blacklist=nouveau 
+     # - nvidia-drm.modeset=1
   
   - type: dnf
     repos:
