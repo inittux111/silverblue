@@ -42,6 +42,7 @@ modules:
     install:
       packages:
         - bat
+        - btop
         - chezmoi
         - chromium
         - fastfetch
